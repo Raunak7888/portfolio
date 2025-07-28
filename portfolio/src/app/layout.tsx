@@ -1,3 +1,4 @@
+import { ClientThemeProvider } from "@/components/ui/themeProvider";
 import "./globals.css";
 import { Mitr } from "next/font/google";
 import { Modak } from "next/font/google";
@@ -45,11 +46,16 @@ const madimi = Madimi_One({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning // avoids mismatch flash
+    >
       <body
-        className={`${mitr.variable} ${modak.variable} ${jersey.variable} ${luckiest.variable} ${madimi.variable} ${syne.variable} antialiased`}
+        className={`antialiased ${mitr.variable} ${modak.variable} ${jersey.variable} ${luckiest.variable} ${madimi.variable} ${syne.variable}`}
       >
-        {children}
+        <ClientThemeProvider>
+          {children}
+        </ClientThemeProvider>
       </body>
     </html>
   );
