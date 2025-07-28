@@ -4,8 +4,15 @@ import { Modak } from "next/font/google";
 import { Jersey_25 } from "next/font/google";
 import { Luckiest_Guy } from "next/font/google";
 import { Madimi_One } from "next/font/google";
+import { Syne_Mono } from "next/font/google";
 
 // Font setup with CSS variables
+const syne = Syne_Mono({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 const mitr = Mitr({
   variable: "--font-mitr",
   subsets: ["latin"],
@@ -40,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body
-        className={`${mitr.variable} ${modak.variable} ${jersey.variable} ${luckiest.variable} ${madimi.variable} antialiased`}
+        className={`${mitr.variable} ${modak.variable} ${jersey.variable} ${luckiest.variable} ${madimi.variable} ${syne.variable} antialiased`}
       >
         {children}
       </body>
