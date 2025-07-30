@@ -1,24 +1,73 @@
 @import "tailwindcss";
 
-.bodt{
+.body{
   --black-color: #000000;
   --white-color: #ffffff;
 
 }
 
-:root {
+.light {
   --background: #ffffff;
   --foreground: #000000;
   --font-sans: var(--font-mitr);
   --font-mono: monospace;
   --navbar: rgba(90, 227, 215, 0.50);
+
+  /* Light Mode Palette: White → Light Blue */
+  --disc-1:  #F0FAFF;
+  --disc-2:  #E1F5FF;
+  --disc-3:  #D3F0FF;
+  --disc-4:  #C5EBFF;
+  --disc-5:  #B8E6FA;
+  --disc-6:  #AAE1F5;
+  --disc-7:  #9CDCF0;
+  --disc-8:  #8FD7EB;
+  --disc-9:  #81D2E6;
+  --disc-10: #73CDDF;
+  --disc-11: #65C8DA;
+  --disc-12: #58C3D5;
+  --disc-13: #4ABECD;
+  --disc-14: #3DB9C8;
+  --disc-15: #31B4C3;
+  --disc-16: #25AEBE;
+  --disc-17: #1BA8B8;
+  --disc-18: #119FAF;
+  --disc-19: #0896A6;
+  --disc-20: #078F9F;
 }
 
 .dark {
   --background: #000000;
   --foreground: #ffffff;
   --navbar: #4c4c4c80;
+
+  /* Dark Mode Palette: Black → Light Gray */
+  --disc-1:  #0A0A0A;
+  --disc-2:  #141414;
+  --disc-3:  #1E1E1E;
+  --disc-4:  #282828;
+  --disc-5:  #323232;
+  --disc-6:  #3C3C3C;
+  --disc-7:  #464646;
+  --disc-8:  #505050;
+  --disc-9:  #5A5A5A;
+  --disc-10: #646464;
+  --disc-11: #6E6E6E;
+  --disc-12: #787878;
+  --disc-13: #828282;
+  --disc-14: #8C8C8C;
+  --disc-15: #969696;
+  --disc-16: #A0A0A0;
+  --disc-17: #AAAAAA;
+  --disc-18: #B4B4B4;
+  --disc-19: #BEBEBE;
+  --disc-20: #C8C8C8;
 }
+
+/* styles/globals.css or tailwind layer */
+
+
+
 
 body {
   background: var(--background);

@@ -1,10 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from 'next-themes';
 
 const Navbar = () => {
     const { theme, setTheme } = useTheme();
+    const [isMute, setIsMute] = useState<boolean>(false);
+
+    const handleMuteHandler = () => {
+        setIsMute(!isMute);
+    }
+
     const handleThemeToggle = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
@@ -22,21 +28,33 @@ const Navbar = () => {
                 <a href="#skills" className="text-2xl hover:underline">Skills</a>
                 <a href="#projects" className="text-2xl hover:underline">Projects</a>
                 <a href="#contact" className="text-2xl hover:underline">Contact</a>
-                <button className="w-8 h-8 hover:scale-110 transition \">
-                    <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10v4c0 2 1 3 3 3h1.43c.37 0 .74.1 1.06.29l2.92 1.83C12.93 20.71 15 19.56 15 16.59V7.41C15 4.43 12.93 3.29 10.41 4.87L7.49 6.7c-.32.19-.69.3-1.06.3H5c-2 0-3 1-3 3z" />
+                <button onClick={handleMuteHandler} className="w-8 h-8 hover:scale-110 transition \" >
+                    {isMute === true ?
+                        <svg viewBox="0 -2 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7.00077V11.0008C1 13.0008 2 14.0008 4 14.0008H5.43C5.8 14.0008 6.17 14.1108 6.49 14.3008L9.41 16.1308C11.93 17.7108 14 16.5608 14 13.5908V4.41077C14 1.43077 11.93 0.290766 9.41 1.87077L6.49 3.70077C6.17 3.89077 5.8 4.00077 5.43 4.00077H4C2 4.00077 1 5.00077 1 7.00077Z" stroke="var(--foreground)" strokeWidth="1.5" />
+                            <g>
+                                <path d="M20.9991 10.961L17.0391 7.00098" stroke="var(--foreground)" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.96 7.04102L17 11.001" stroke="var(--foreground)" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                        :
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 10v4c0 2 1 3 3 3h1.43c.37 0 .74.1 1.06.29l2.92 1.83C12.93 20.71 15 19.56 15 16.59V7.41C15 4.43 12.93 3.29 10.41 4.87L7.49 6.7c-.32.19-.69.3-1.06.3H5c-2 0-3 1-3 3z" stroke="var(--foreground)" strokeWidth="1.5" />
 
-                        <path d="M18 8c1.5 2 1.5 6 0 8" stroke="#ffffff" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-                        <path d="M20 5c3 4 3 10 0 14" stroke="#ffffff" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-                    </svg>
+                            <path d="M18 8c1.5 2 1.5 6 0 8" stroke="var(--foreground)" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                            <path d="M20 5c3 4 3 10 0 14" stroke="var(--foreground)" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                        </svg>
+                    }
 
-                </button>   
+
+
+                </button>
 
                 {/* Icons */}
-                <button className={`${theme === 'light' ? "w-8 h-8 mx-[4px]" : "w-10 h-10" } hover:scale-110 transition`} onClick={handleThemeToggle}>
+                <button className={`${theme === 'light' ? "w-8 h-8 mx-[4px]" : "w-10 h-10"} hover:scale-110 transition`} onClick={handleThemeToggle}>
                     {theme === 'light' ?
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.641 352.641"  transform="matrix(-1, 0, 0, 1, 0, 0)">
-                            <g id="SVGRepo_bgCarrier"  />
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352.641 352.641" transform="matrix(-1, 0, 0, 1, 0, 0)">
+                            <g id="SVGRepo_bgCarrier" />
                             <g id="SVGRepo_tracerCarrier" />
                             <g id="SVGRepo_iconCarrier">
                                 <path fill="#FFE53C" d="M71.926,235.796c88-5.6,158.8-76.4,164.4-164c1.2-18.8-0.4-36.8-4.8-54c-1.6-6.4,5.2-12,11.2-9.2 c63.2,29.2,106,94.4,101.6,169.6c-4.8,88.8-76.8,161.2-166,166c-74.8,4-140.4-38.8-169.6-101.6c-2.8-6,2.8-12.8,9.2-11.2 C35.526,235.396,53.526,236.996,71.926,235.796z" />
