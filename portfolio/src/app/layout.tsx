@@ -1,11 +1,19 @@
+import { ClientThemeProvider } from "@/components/ui/themeProvider";
 import "./globals.css";
 import { Mitr } from "next/font/google";
 import { Modak } from "next/font/google";
 import { Jersey_25 } from "next/font/google";
 import { Luckiest_Guy } from "next/font/google";
 import { Madimi_One } from "next/font/google";
+import { Syne_Mono } from "next/font/google";
 
 // Font setup with CSS variables
+const syne = Syne_Mono({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 const mitr = Mitr({
   variable: "--font-mitr",
   subsets: ["latin"],
@@ -38,11 +46,17 @@ const madimi = Madimi_One({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="dark"
+      suppressHydrationWarning // avoids mismatch flash
+    >
       <body
-        className={`${mitr.variable} ${modak.variable} ${jersey.variable} ${luckiest.variable} ${madimi.variable} antialiased`}
+        className={`antialiased ${mitr.variable} ${modak.variable} ${jersey.variable} ${luckiest.variable} ${madimi.variable} ${syne.variable}`}
       >
-        {children}
+        <ClientThemeProvider>
+          {children}
+        </ClientThemeProvider>
       </body>
     </html>
   );
