@@ -38,8 +38,8 @@ const Star: React.FC<StarProps> = ({ size, xPos, yPos, color = 'var(--foreground
 const Stars = () => {
   return (
     <div className="absolute w-screen h-screen pointer-events-none z-[15] ">
-      <Star size={6} xPos={2} yPos={1} />
-      <Star size={6} xPos={25} yPos={25} />
+      <Star size={6} xPos={1} yPos={1} />
+      <Star size={6} xPos={25} yPos={20} />
       <Star size={3} xPos={38.5} yPos={52} />
       <Star size={2.5} xPos={35} yPos={7} />
       <Star size={1.8} xPos={78} yPos={8} />

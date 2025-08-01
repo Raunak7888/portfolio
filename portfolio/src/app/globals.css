@@ -3,7 +3,6 @@
 .body{
   --black-color: #000000;
   --white-color: #ffffff;
-
 }
 
 .light {
@@ -12,6 +11,8 @@
   --font-sans: var(--font-mitr);
   --font-mono: monospace;
   --navbar: rgba(90, 227, 215, 0.50);
+  --accent: #ff3a28;
+  --card-gradient: linear-gradient(to right,#078F9F80,#00000080) 
 
   /* Light Mode Palette: White → Light Blue */
   --disc-1:  #F0FAFF;
@@ -40,6 +41,9 @@
   --background: #000000;
   --foreground: #ffffff;
   --navbar: #4c4c4c80;
+  --accent: #ff5900;
+
+
 
   /* Dark Mode Palette: Black → Light Gray */
   --disc-1:  #0A0A0A;
