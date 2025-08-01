@@ -1,4 +1,4 @@
-import { ClientThemeProvider } from "@/components/ui/themeProvider";
+import { ClientThemeProvider } from "@/components/provider/themeProvider";
 import "./globals.css";
 import { Mitr } from "next/font/google";
 import { Modak } from "next/font/google";
