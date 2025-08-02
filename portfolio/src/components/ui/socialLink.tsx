@@ -3,10 +3,10 @@
 import { GithubSvg, XSvg, LinkedInSvg, GmailSvg } from '@/util/icons';
 
 const iconWrapperStyles =
-  'w-[8vh] h-[8vh] rounded-xl bg-muted flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-accent transition-colors duration-300';
+  'w-[10vh] h-[10vh] rounded-2xl flex items-center justify-center';
 
 const SocialIcons = () => (
-  <div className="flex gap-1 sm:gap-5 border border-[var(--foreground)]/20 rounded-full px-4 py-2 shadow-sm backdrop-blur-sm">
+  <div className="flex">
     <a
       href="https://github.com"
       target="_blank"

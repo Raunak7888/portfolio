@@ -50,9 +50,9 @@ const HeroIntroCard = () => {
         </p>
 
         {/* Socials + Connect */}
-        <div className="mt-6 relative right-[5vw] flex flex-col scale-[0.75] md:flex-row md:items-center  gap-4 md:gap-6">
+        <div className="mt-6 relative right-[5vw] flex flex-col scale-[0.75] md:flex-row md:items-center gap-4 md:gap-6">
           <SocialIcons />
-          <span className=" flex justify-center font-jersey items-center h-[10vh]  px-5 py-2 rounded-full text-3xl font-semibold tracking-wide bg-[var(--accent)] text-black shadow hover:scale-105 transition-transform">
+          <span className=" flex justify-center font-jersey items-center h-[8vh] px-8 rounded-full text-3xl font-semibold tracking-wide bg-[var(--accent)] text-black shadow hover:scale-105 transition-transform">
             Let’s Connect
           </span>
         </div>
