@@ -1,11 +1,11 @@
 'use client';
 
+import SocialIcons from '@/components/ui/socialLink';
 import React from 'react';
-import SocialIcons from './socialLink';
 
 const HeroIntroCard = () => {
   return (
-    <div className="relative flex justify-center font-mitr items-center px-[2vw] py-12 rounded-[5vh] bg-white/5 scale-[0.80] backdrop-blur-2xl shadow-2xl border border-[var(--foreground)/10]">
+    <div className="relative flex justify-center font-mitr items-center px-[2vw] py-[4vh] rounded-[5vh] bg-white/5 scale-[0.80] backdrop-blur-2xl shadow-2xl border border-[var(--foreground)/10]">
 
       {/* 🔗 View Source Button */}
       <a
