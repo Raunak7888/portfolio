@@ -1,11 +1,11 @@
 'use client';
 
+import SocialIcons from '@/components/ui/socialLink';
 import React from 'react';
-import SocialIcons from './socialLink';
 
 const HeroIntroCard = () => {
   return (
-    <div className="relative flex justify-center font-mitr items-center px-[2vw] py-12 rounded-[5vh] bg-white/5 scale-[0.80] backdrop-blur-2xl shadow-2xl border border-[var(--foreground)/10]">
+    <div className="relative flex justify-center font-mitr items-center px-[2vw] py-[4vh] rounded-[5vh] bg-white/5 scale-[0.80] backdrop-blur-2xl shadow-2xl border border-[var(--foreground)/10]">
 
       {/* 🔗 View Source Button */}
       <a
@@ -50,9 +50,9 @@ const HeroIntroCard = () => {
         </p>
 
         {/* Socials + Connect */}
-        <div className="mt-6 relative right-[5vw] flex flex-col scale-[0.75] md:flex-row md:items-center  gap-4 md:gap-6">
+        <div className="mt-6 relative right-[5vw] flex flex-col scale-[0.75] md:flex-row md:items-center gap-4 md:gap-6">
           <SocialIcons />
-          <span className=" flex justify-center font-jersey items-center h-[10vh]  px-5 py-2 rounded-full text-3xl font-semibold tracking-wide bg-[var(--accent)] text-black shadow hover:scale-105 transition-transform">
+          <span className=" flex justify-center font-jersey items-center h-[8vh] px-8 rounded-full text-3xl font-semibold tracking-wide bg-[var(--accent)] text-black shadow hover:scale-105 transition-transform">
             Let’s Connect
           </span>
         </div>

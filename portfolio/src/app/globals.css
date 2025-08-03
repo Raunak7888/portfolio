@@ -12,7 +12,8 @@
   --font-mono: monospace;
   --navbar: rgba(90, 227, 215, 0.50);
   --accent: #ff3a28;
-  --card-gradient: linear-gradient(to right,#078F9F80,#00000080) 
+  --card-gradient: linear-gradient(to right,#078F9F80,#00000080);
+  --timeline: #6b7bf2;
 
   /* Light Mode Palette: White → Light Blue */
   --disc-1:  #F0FAFF;
@@ -42,6 +43,7 @@
   --foreground: #ffffff;
   --navbar: #4c4c4c80;
   --accent: #ff5900;
+  --timeline: #4c4c4c;
 
 
 
