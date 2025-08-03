@@ -1,5 +1,6 @@
 'use client';
 
+import { Brain, Home, LibraryBig, Phone, UserRound } from 'lucide-react';
 import React from 'react';
 
 type TimeLineBarProps = {
@@ -14,7 +15,7 @@ type TimeLineBarProps = {
   lineWidth?: string;
 };
 
-const defaultIcons:React.ElementType[] = [];
+const defaultIcons:React.ElementType[] = [Home,UserRound,Brain,LibraryBig,Phone];
 
 export const TimeLineBar: React.FC<TimeLineBarProps> = ({
   fillPercent = 40,
