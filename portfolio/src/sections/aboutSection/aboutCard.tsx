@@ -20,6 +20,7 @@ export const AboutCard1 = () => {
           nodeSpacing="4.7vh"
           reduceSpace={2.09}
           lineWidth='13px'
+          textColor='text-[var(--background)]'
         />
       </div>
       <div className="w-[45vw] h-[40vh] overflow-y-auto px-5 py-5 gap-[2vh] flex flex-col justify-center text-white text-base leading-relaxed font-mitr font-medium">
@@ -67,6 +68,7 @@ export const AboutCard2 = () => {
           nodeSpacing="4.7vh"
           reduceSpace={2.09}
           lineWidth='13px'
+          textColor='text-[var(--background)]'
         />
       </div>
       <div className="w-[45vw] h-[40vh] overflow-y-auto px-5 py-5 gap-[2vh] flex flex-col justify-center text-white text-base leading-relaxed font-mitr font-medium">

@@ -15,7 +15,7 @@ export default function Home() {
       <header className='fixed top-[4vh] left-1/2 transform -translate-x-1/2 z-50'>
         <Navbar />
       </header>
-      <aside className='flex fixed left-[91.8vw] top-1/4 '>
+      <aside className='flex fixed left-[91.8vw] top-1/4 text-[var(--foreground)] '>
         <TimeLineBar
           fillPercent={0}
           accentColor="var(--accent)" // green-500
@@ -25,6 +25,7 @@ export default function Home() {
           nodeSpacing="2vh"
           reduceSpace={3.1}
           lineWidth='13px'
+          textColor='text-[var(--foreground)]'
         />
       </aside>
 
