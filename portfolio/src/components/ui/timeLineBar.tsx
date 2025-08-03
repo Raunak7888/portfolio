@@ -13,6 +13,7 @@ type TimeLineBarProps = {
   nodeSpacing?: string;
   reduceSpace?: number;
   lineWidth?: string;
+  textColor?: string;
 };
 
 const defaultIcons:React.ElementType[] = [Home,UserRound,Brain,LibraryBig,Phone];
@@ -27,6 +28,7 @@ export const TimeLineBar: React.FC<TimeLineBarProps> = ({
   nodeSpacing = '2vh',
   reduceSpace = 1,
   lineWidth = '10px',
+  textColor = 'text-[var(--foreground)]',
 }) => {
   const totalNodes = icons.length;
   const nodesToAccent = Math.ceil((fillPercent / 100) * totalNodes);
@@ -63,7 +65,7 @@ export const TimeLineBar: React.FC<TimeLineBarProps> = ({
                 border: `3px solid ${borderColor}`,
               }}
             >
-              <Icon className="w-[1.5vw] h-[1.5vw] text-[var(--background)]" />
+              <Icon className={`w-[1.5vw] h-[1.5vw] ${textColor}`} />
             </div>
           );
         })}
